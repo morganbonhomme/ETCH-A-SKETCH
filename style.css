@@ -1,43 +1,73 @@
 *{
   font-family: 'Baloo Bhaina 2', cursive;
   text-align: center;
+  background-color: #f5f5f5;
 }
 
+h1 {
+  letter-spacing: 2px;
+  font-size: 36px;
+  margin: 0px;
+  padding: 0px;
+}
 
+h3 {
+  letter-spacing: 2px;
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 18px;
+  font-size:16px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
 
 .gridContainer {
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
   width: 500px;
   height: 500px;
-  border: 1px solid lightslategrey
+  border: 1px solid black
 }
 
 .gridElement {
+  background-color: white;
 }
 
 .gridElement::before {
   content: "";
   padding-bottom: 100%;
-  display: inline-block;
-  vertical-align: top;
 }
 
 .button {
-	background-color:#7892c2;
-	border-radius:8px;
-	border:1px solid #4e6096;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:20px;
-	padding:8px 42px;
-	text-decoration:none;
+	border-radius:4px;
+	border:1px solid black;
+	color:black;
+  font-size:16px;
+  letter-spacing: 2px;
+  width: 100px;
+  height: 35px;
+  text-decoration:none;
+  margin-right: 10px;
+  margin-left: 10px;
 }
-.button:hover {
-	background-color:#476e9e;
+#rainbow:hover {
+  background: rgb(255,154,162);
+  background: linear-gradient(90deg, rgba(255,154,162,1) 0%, rgba(255,218,193,1) 50%, rgba(181,234,215,1) 100%);
+  color: black;
 }
+
+#delete:hover, #resize:hover {
+  background: black;
+  color: #f5f5f5;
+}
+
+#eraser:hover {
+  background: white;
+  color: grey;
+}
+
+
 .button:active {
 	position:relative;
 	top:1px;
@@ -45,4 +75,11 @@
 
 .button:focus {
 outline:0;
+}
+
+.parameters{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;  
 }
